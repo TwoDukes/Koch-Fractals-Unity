@@ -21,6 +21,7 @@ public class KochLine : KochGenerator
         _lineRenderer.loop = true;
         _lineRenderer.positionCount = _position.Length;
         _lineRenderer.SetPositions(_position);
+        _lerpPosition = new Vector3[_position.Length];
     }
 
     private void Update()
@@ -45,22 +46,24 @@ public class KochLine : KochGenerator
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.O))
-        {
-            KochGenerate(_targetPosition, true, _generatoMultiplier);
-            _lerpPosition = new Vector3[_position.Length];
-            _lineRenderer.positionCount = _position.Length;
-            _lineRenderer.SetPositions(_position);
-            _lerpAmount = 0;
-        }
-        if (Input.GetKeyUp(KeyCode.I))
-        {
-            KochGenerate(_targetPosition, false, _generatoMultiplier);
-            _lerpPosition = new Vector3[_position.Length];
-            _lineRenderer.positionCount = _position.Length;
-            _lineRenderer.SetPositions(_position);
-            _lerpAmount = 0;
-        }
+
+
+        //if (Input.GetKeyUp(KeyCode.O))
+        //{
+        //    KochGenerate(_targetPosition, true, _generatoMultiplier);
+        //    _lerpPosition = new Vector3[_position.Length];
+        //    _lineRenderer.positionCount = _position.Length;
+        //    _lineRenderer.SetPositions(_position);
+        //    _lerpAmount = 0;
+        //}
+        //if (Input.GetKeyUp(KeyCode.I))
+        //{
+        //    KochGenerate(_targetPosition, false, _generatoMultiplier);
+        //    _lerpPosition = new Vector3[_position.Length];
+        //    _lineRenderer.positionCount = _position.Length;
+        //    _lineRenderer.SetPositions(_position);
+        //    _lerpAmount = 0;
+        //}
 
     }
 }

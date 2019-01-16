@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axis: 2
-  initiator: 2
+  initiator: 0
   _generator:
     serializedVersion: 2
     m_Curve:
@@ -264,6 +264,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _startGen:
+  - outwards: 0
+    scale: 1
   _useBezierCurves: 1
   _bezierVertexCount: 8
   _initiatorSize: 3
@@ -498,6 +501,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _startGen: []
   _useBezierCurves: 0
   _bezierVertexCount: 0
   _initiatorSize: 4.58
